@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/item_cardview"
+    app:cardCornerRadius="5dp"
+    app:elevation="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_ordDetail"
+            style="@style/item_textview"
+            android:text="配送单详情"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_deliveryAddr"
+            style="@style/item_textview"
+            android:text="配送地址:"
+            android:layout_below="@+id/tv_ordDetail"/>
+
+        <TextView
+            android:id="@+id/tv_deliveryAddr_content"
+            style="@style/item_textview"
+            android:layout_toEndOf="@+id/tv_deliveryAddr"
+            android:layout_alignTop="@+id/tv_deliveryAddr"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_recipient"
+            style="@style/item_textview"
+            android:text="收件人:"
+            android:layout_below="@+id/tv_deliveryAddr"/>
+
+        <TextView
+            android:id="@+id/tv_recipient_content"
+            style="@style/item_textview"
+            android:layout_toEndOf="@+id/tv_recipient"
+            android:layout_alignTop="@+id/tv_recipient"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_ordTel"
+            style="@style/item_textview"
+            android:text="联系电话:"
+            android:layout_below="@+id/tv_recipient"/>
+
+        <TextView
+            android:id="@+id/tv_ordTel_content"
+            style="@style/item_textview"
+            android:layout_toEndOf="@+id/tv_ordTel"
+            android:layout_alignTop="@+id/tv_ordTel"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/tv_ordTel"
+            android:scaleType="fitCenter"
+            android:layout_margin="@dimen/item_margin"
+            android:src="@drawable/ic_call"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_exprItem"
+            style="@style/item_textview"
+            android:text="快递物品:"
+            android:layout_below="@+id/tv_ordTel"/>
+
+        <TextView
+            android:id="@+id/tv_exprItem_content"
+            style="@style/item_textview"
+            android:layout_toEndOf="@+id/tv_exprItem"
+            android:layout_alignTop="@+id/tv_exprItem"
+            android:text=""/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

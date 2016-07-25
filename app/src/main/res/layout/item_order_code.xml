@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/item_cardview"
+    app:cardCornerRadius="5dp"
+    app:elevation="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_ordCode"
+            style="@style/item_textview"
+            android:text="订单编号:"/>
+
+        <TextView
+            android:id="@+id/tv_ordCode_content"
+            style="@style/item_textview"
+            android:layout_toEndOf="@+id/tv_ordCode"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_deliveryCode"
+            style="@style/item_textview"
+            android:layout_below="@+id/tv_ordCode"
+            android:text="配送单编号:"/>
+
+        <TextView
+            android:id="@+id/tv_deliveryCode_content"
+            style="@style/item_textview"
+            android:layout_alignTop="@+id/tv_deliveryCode"
+            android:layout_toEndOf="@+id/tv_deliveryCode"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_logisticCode"
+            style="@style/item_textview"
+            android:layout_below="@+id/tv_deliveryCode"
+            android:text="物流单编号:"/>
+
+        <TextView
+            android:id="@+id/tv_logisticCode_content"
+            style="@style/item_textview"
+            android:layout_alignTop="@+id/tv_logisticCode"
+            android:layout_toEndOf="@+id/tv_logisticCode"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_deliveryStatus"
+            style="@style/item_textview"
+            android:layout_below="@+id/tv_logisticCode"
+            android:text="配送状态:"/>
+
+        <TextView
+            android:id="@+id/tv_deliveryStatus_content"
+            style="@style/item_textview"
+            android:layout_alignTop="@+id/tv_deliveryStatus"
+            android:layout_toEndOf="@+id/tv_deliveryStatus"
+            android:text="待配送"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

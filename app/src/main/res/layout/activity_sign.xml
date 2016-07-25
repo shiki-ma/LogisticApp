@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/cb_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="身份证验证通过" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_card_front"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/ic_front"
+            fresco:placeholderImageScaleType="fitCenter" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_card_back"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_card_front"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/ic_back"
+            fresco:placeholderImageScaleType="fitCenter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/sign_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/item_background"></com.github.gcacace.signaturepad.views.SignaturePad>
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="请在此处签名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_search"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="60dp"
+                android:background="@color/transparent"
+                android:hint="物流单号"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1px"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_receipt"
+                android:background="@color/line_weak_dial" />
+
+            <ImageView
+                android:id="@+id/iv_receipt"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_device_scan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_scan" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/fragment_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <CheckBox
+            android:id="@+id/chk_allcheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="全选" />
+
+        <Button
+            android:id="@+id/btn_receipt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_login"
+            android:text="接单"
+            android:textColor="@color/item_text_white" />
+    </RelativeLayout>
+</LinearLayout>

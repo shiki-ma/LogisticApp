@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_order_code"></include>
+
+            <include layout="@layout/item_order_detail"></include>
+
+            <android.support.v7.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/item_cardview"
+                app:cardCornerRadius="5dp"
+                app:elevation="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_dc_complaint"
+                        style="@style/item_textview"
+                        android:text="投诉内容"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_dc_complaint_content"
+                        style="@style/item_textview"
+                        android:text=""
+                        android:layout_below="@+id/tv_dc_complaint"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/item_cardview"
+                app:cardCornerRadius="5dp"
+                app:elevation="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_dc_complaintBack"
+                        style="@style/item_textview"
+                        android:text="处理反馈"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/et_dc_complaintBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:inputType="textMultiLine"
+                        android:layout_margin="10dp"
+                        android:layout_below="@+id/tv_dc_complaintBack"
+                        android:ems="10"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_dc_submit"
+                style="@style/item_textview"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_login"
+                android:layout_margin="5dp"
+                android:text="提交"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

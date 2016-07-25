@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.std.logisticapp.widget.ContentViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop = "@drawable/ic_home"
+            android:checked="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="首页"
+            android:textColor="@color/tab_content"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_delivery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop = "@drawable/ic_delivery"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="配送"
+            android:textColor="@color/tab_content"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop = "@drawable/ic_profile"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="我的"
+            android:textColor="@color/tab_content"
+            android:textSize="12dp" />
+    </RadioGroup>
+</LinearLayout>
